@@ -1,0 +1,2 @@
+PASS
+ok  	_/home/rlittles/self_projects/intro_to_programming_in_go_Solutions/twelve	0.002s

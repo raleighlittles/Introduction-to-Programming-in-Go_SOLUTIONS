@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math" 
+)
+
 
 func main() {
 	problem1()
 	problem2()
 	problem3()
-
 }
 
 func problem1() {
@@ -37,21 +40,28 @@ func Average(xs []float64) float64 {
 }
 
 // Finds the minimum of a slice of integers
-func Min(xs []float64) float64 {
-	minimum := float64(xs[0])
-
+func Min(xs []int8) int8 {
+	if (len(xs) != 0){
+		minimum := int8(xs[0])
+	} else {
+		minimum :=  math.MaxInt8
+	}
 	for _, item := range xs {
 		if minimum < item {
 			minimum = item
-		}
+		} 
 	}
 
 	return minimum
 }
 
 // Finds the maximum of a slice of integers
-func Max(xs []float64) float64 {
-	maximum := float64(xs[0])
+func Max(xs []int8) int8 {
+	if len(xs) != 0{
+		maximum := int8(xs[0])
+	} else {
+		maximum := math.MinInt8
+	}
 
 	for _, item := range xs {
 		if maximum > item {
